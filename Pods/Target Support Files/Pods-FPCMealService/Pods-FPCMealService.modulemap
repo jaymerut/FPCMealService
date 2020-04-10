@@ -1,0 +1,6 @@
+framework module Pods_FPCMealService {
+  umbrella header "Pods-FPCMealService-umbrella.h"
+
+  export *
+  module * { export * }
+}

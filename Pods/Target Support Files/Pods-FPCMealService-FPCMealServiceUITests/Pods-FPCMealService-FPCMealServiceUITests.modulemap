@@ -1,0 +1,6 @@
+framework module Pods_FPCMealService_FPCMealServiceUITests {
+  umbrella header "Pods-FPCMealService-FPCMealServiceUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
