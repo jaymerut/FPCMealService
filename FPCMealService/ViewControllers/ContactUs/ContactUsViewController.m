@@ -119,7 +119,7 @@
 - (UILabel *)labelAddress {
     if (!_labelAddress) {
         _labelAddress = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelAddress.font = [UIFont fontWithName:@"HoeflerText-Black" size:28.0];
+        _labelAddress.font = [UIFont fontWithName:@"Optima-Bold" size:28.0];
         _labelAddress.text = @"Camp Address";
     }
     return _labelAddress;
@@ -127,7 +127,7 @@
 - (UILabel *)labelEmail {
     if (!_labelEmail) {
         _labelEmail = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelEmail.font = [UIFont fontWithName:@"HoeflerText-Black" size:28.0];
+        _labelEmail.font = [UIFont fontWithName:@"Optima-Bold" size:28.0];
         _labelEmail.text = @"Email";
     }
     return _labelEmail;
@@ -135,7 +135,7 @@
 - (UILabel *)labelPhone {
     if (!_labelPhone) {
         _labelPhone = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelPhone.font = [UIFont fontWithName:@"HoeflerText-Black" size:28.0];
+        _labelPhone.font = [UIFont fontWithName:@"Optima-Bold" size:28.0];
         _labelPhone.text = @"Phone Number";
     }
     return _labelPhone;
@@ -143,7 +143,7 @@
 - (UILabel *)labelAddressText {
     if (!_labelAddressText) {
         _labelAddressText = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelAddressText.font = [UIFont fontWithName:@"HoeflerText-Regular" size:18.0];
+        _labelAddressText.font = [UIFont fontWithName:@"Optima-Regular" size:18.0];
         _labelAddressText.text = @"933 East Friendly Pines Road\nPrescott, AZ\n86303-8202";
         _labelAddressText.numberOfLines = 0;
     }
@@ -152,7 +152,7 @@
 - (UILabel *)labelEmailText {
     if (!_labelEmailText) {
         _labelEmailText = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelEmailText.font = [UIFont fontWithName:@"HoeflerText-Regular" size:18.0];
+        _labelEmailText.font = [UIFont fontWithName:@"Optima-Regular" size:18.0];
         _labelEmailText.text = @"info@friendlypines.com";
         _labelEmailText.numberOfLines = 0;
     }
@@ -161,7 +161,7 @@
 - (UILabel *)labelPhoneText {
     if (!_labelPhoneText) {
         _labelPhoneText = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelPhoneText.font = [UIFont fontWithName:@"HoeflerText-Regular" size:18.0];
+        _labelPhoneText.font = [UIFont fontWithName:@"Optima-Regular" size:18.0];
         _labelPhoneText.text = @"(928) 445-2128";
         _labelPhoneText.numberOfLines = 0;
     }
@@ -196,29 +196,29 @@
         make.width.equalTo(self.containerView.mas_width);
     }];
     
-    [self.containerView addSubview:self.labelEmail];
-    [self.labelEmail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelAddressText.mas_bottom).offset(40);
-        make.left.equalTo(self.containerView.mas_left).offset(20);
-        make.width.equalTo(self.containerView.mas_width);
-    }];
-    [self.containerView addSubview:self.labelEmailText];
-    [self.labelEmailText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelEmail.mas_bottom).offset(10);
-        make.left.equalTo(self.containerView.mas_left).offset(20);
-        make.right.equalTo(self.containerView.mas_right);
-        make.width.equalTo(self.containerView.mas_width);
-    }];
-    
     [self.containerView addSubview:self.labelPhone];
     [self.labelPhone mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.labelEmailText.mas_bottom).offset(40);
+        make.top.equalTo(self.labelAddressText.mas_bottom).offset(40);
         make.left.equalTo(self.containerView.mas_left).offset(20);
         make.width.equalTo(self.containerView.mas_width);
     }];
     [self.containerView addSubview:self.labelPhoneText];
     [self.labelPhoneText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.labelPhone.mas_bottom).offset(10);
+        make.left.equalTo(self.containerView.mas_left).offset(20);
+        make.right.equalTo(self.containerView.mas_right);
+        make.width.equalTo(self.containerView.mas_width);
+    }];
+    
+    [self.containerView addSubview:self.labelEmail];
+    [self.labelEmail mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.labelPhoneText.mas_bottom).offset(40);
+        make.left.equalTo(self.containerView.mas_left).offset(20);
+        make.width.equalTo(self.containerView.mas_width);
+    }];
+    [self.containerView addSubview:self.labelEmailText];
+    [self.labelEmailText mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.labelEmail.mas_bottom).offset(10);
         make.left.equalTo(self.containerView.mas_left).offset(20);
         make.right.equalTo(self.containerView.mas_right);
         make.width.equalTo(self.containerView.mas_width);

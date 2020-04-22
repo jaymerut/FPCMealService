@@ -134,13 +134,14 @@
 
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
     MenuSectionController *sectionController = [[MenuSectionController alloc] init];
+    sectionController.delegate = self.viewController;
     return sectionController;
 }
 
 - (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
     
     UILabel *label = [[UILabel alloc] init];
-    [label setText:@"No Groups"];
+    [label setText:@"No Menu Items Available"];
     [label setTextAlignment:NSTextAlignmentCenter];
     
     return label;

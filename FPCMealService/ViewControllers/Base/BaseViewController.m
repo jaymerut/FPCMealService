@@ -144,10 +144,20 @@ static UIImage *imagePayNowFooter;
 - (UILabel *)labelHeader {
     if (!_labelHeader) {
         _labelHeader = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelHeader.font = [UIFont fontWithName:@"HoeflerText-Italic" size:36.0];
+        _labelHeader.font = [UIFont fontWithName:@"Optima-BoldItalic" size:36.0];
         _labelHeader.textColor = [UIColor whiteColor];
     }
     return _labelHeader;
+}
+
+- (UILabel *)labelTotal {
+    if (!_labelTotal) {
+        _labelTotal = [[UILabel alloc] initWithFrame:CGRectZero];
+        _labelTotal.font = [UIFont fontWithName:@"Optima-BoldItalic" size:28.0];
+        _labelTotal.textColor = [UIColor whiteColor];
+        _labelTotal.text = [NSString stringWithFormat:@"$%.2f", self.total.doubleValue];
+    }
+    return _labelTotal;
 }
 
 - (UIScrollView *)scrollView {
@@ -230,7 +240,7 @@ static UIImage *imagePayNowFooter;
 - (UILabel *)labelMenuFooter {
     if (!_labelMenuFooter) {
         _labelMenuFooter = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelMenuFooter.font = [UIFont fontWithName:@"HoeflerText-Regular" size:14.0];
+        _labelMenuFooter.font = [UIFont fontWithName:@"Optima-Regular" size:14.0];
         _labelMenuFooter.textColor = [UIColor blackColor];
         _labelMenuFooter.text = @"Menu";
     }
@@ -239,7 +249,7 @@ static UIImage *imagePayNowFooter;
 - (UILabel *)labelContactUsFooter {
     if (!_labelContactUsFooter) {
         _labelContactUsFooter = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelContactUsFooter.font = [UIFont fontWithName:@"HoeflerText-Regular" size:14.0];
+        _labelContactUsFooter.font = [UIFont fontWithName:@"Optima-Regular" size:14.0];
         _labelContactUsFooter.textColor = [UIColor blackColor];
         _labelContactUsFooter.text = @"Contact Us";
     }
@@ -248,7 +258,7 @@ static UIImage *imagePayNowFooter;
 - (UILabel *)labelPayNowFooter {
     if (!_labelPayNowFooter) {
         _labelPayNowFooter = [[UILabel alloc] initWithFrame:CGRectZero];
-        _labelPayNowFooter.font = [UIFont fontWithName:@"HoeflerText-Regular" size:14.0];
+        _labelPayNowFooter.font = [UIFont fontWithName:@"Optima-Regular" size:14.0];
         _labelPayNowFooter.textColor = [UIColor blackColor];
         _labelPayNowFooter.text = @"Pay Now";
     }
@@ -283,6 +293,12 @@ static UIImage *imagePayNowFooter;
     [self.viewHeader addSubview:self.labelHeader];
     [self.labelHeader mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.viewHeader.mas_left).inset(20);
+        make.centerY.equalTo(self.viewHeader.mas_centerY).offset(10);
+    }];
+    
+    [self.viewHeader addSubview:self.labelTotal];
+    [self.labelTotal mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.viewHeader.mas_right).inset(20);
         make.centerY.equalTo(self.viewHeader.mas_centerY).offset(10);
     }];
     
@@ -403,22 +419,41 @@ static UIImage *imagePayNowFooter;
     UITapGestureRecognizer *gestureTapPayNow = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTap_PayNow:)];
     [self.containerViewPayNowFooter addGestureRecognizer:gestureTapPayNow];
 }
+- (NSMutableArray *)arrayForPayment {
+    NSMutableArray *array = [NSMutableArray new];
+    
+    for (MenuItem *item in self.menuItems) {
+        if (item.quantity.intValue > 0) {
+            [array addObject:item];
+        }
+    }
+    
+    return array;
+}
 
 #pragma mark UIResponders
 - (void)gestureTap_Menu:(UITapGestureRecognizer *)gesture {
-    UIViewController *destinationVC = [HomeViewController new];
+    HomeViewController *destinationVC = [HomeViewController new];
+    destinationVC.total = self.total;
+    destinationVC.menuItems = self.menuItems;
     if ([self class] != [HomeViewController class]) {
         [self.navigationController pushViewController:destinationVC animated:NO];
     }
 }
 - (void)gestureTap_ContactUs:(UITapGestureRecognizer *)gesture {
-    UIViewController *destinationVC = [ContactUsViewController new];
+    ContactUsViewController *destinationVC = [ContactUsViewController new];
+    destinationVC.total = self.total;
+    destinationVC.menuItems = self.menuItems;
+    destinationVC.labelTotal.hidden = YES;
     if ([self class] != [ContactUsViewController class]) {
         [self.navigationController pushViewController:destinationVC animated:NO];
     }
 }
 - (void)gestureTap_PayNow:(UITapGestureRecognizer *)gesture {
-    UIViewController *destinationVC = [PayNowViewController new];
+    PayNowViewController *destinationVC = [PayNowViewController new];
+    destinationVC.total = self.total;
+    destinationVC.menuItems = self.menuItems;
+    destinationVC.items = [self arrayForPayment];
     if ([self class] != [PayNowViewController class]) {
         [self.navigationController pushViewController:destinationVC animated:NO];
     }

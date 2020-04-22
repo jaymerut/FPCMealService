@@ -25,6 +25,10 @@
 		96067B0F243EC2E2007DC90C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B0E243EC2E2007DC90C /* BaseViewController.m */; };
 		96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B12243EC9A8007DC90C /* ContactUsViewController.m */; };
 		96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B16243EC9CD007DC90C /* PayNowViewController.m */; };
+		960CD11F244E370C00319678 /* PayNowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960CD11E244E370C00319678 /* PayNowTableViewCell.m */; };
+		968519532445FAF5000B88CC /* StripeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 968519522445FAF5000B88CC /* StripeAPI.m */; };
+		96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */; };
+		96DF86DF2445FC6200309AC0 /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DE2445FC6200309AC0 /* BaseAPI.m */; };
 		D5929A761F806624542E943B /* Pods_FPCMealService_FPCMealServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB03CF3F5981E90B3CA1CB5 /* Pods_FPCMealService_FPCMealServiceUITests.framework */; };
 		F2FE4A89E25F0E0E8F0F9C3D /* Pods_FPCMealService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10532FD4BF320D724520C3AE /* Pods_FPCMealService.framework */; };
 		F66D5FA9E31C9AB1C21A4ECE /* Pods_FPCMealServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C960963011C36B47B97FFEEE /* Pods_FPCMealServiceTests.framework */; };
@@ -53,7 +57,8 @@
 		19C57E716B58FE0B00981761 /* Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig"; path = "Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5F3771FAE15E8B9FC77CA3 /* Pods-FPCMealService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService.release.xcconfig"; path = "Target Support Files/Pods-FPCMealService/Pods-FPCMealService.release.xcconfig"; sourceTree = "<group>"; };
 		686A6816CFDD4D7FE880A274 /* Pods-FPCMealServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealServiceTests.release.xcconfig"; path = "Target Support Files/Pods-FPCMealServiceTests/Pods-FPCMealServiceTests.release.xcconfig"; sourceTree = "<group>"; };
-		9606357E243C003F00709BA2 /* FPCMealService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPCMealService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9602117524494339007F44F3 /* FPCMealService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FPCMealService.entitlements; sourceTree = "<group>"; };
+		9606357E243C003F00709BA2 /* FPC Meal Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FPC Meal Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96063581243C003F00709BA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96063582243C003F00709BA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9606358A243C004000709BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,6 +95,14 @@
 		96067B12243EC9A8007DC90C /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 		96067B15243EC9CD007DC90C /* PayNowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNowViewController.h; sourceTree = "<group>"; };
 		96067B16243EC9CD007DC90C /* PayNowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowViewController.m; sourceTree = "<group>"; };
+		960CD11D244E370C00319678 /* PayNowTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNowTableViewCell.h; sourceTree = "<group>"; };
+		960CD11E244E370C00319678 /* PayNowTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowTableViewCell.m; sourceTree = "<group>"; };
+		968519512445FAF5000B88CC /* StripeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripeAPI.h; sourceTree = "<group>"; };
+		968519522445FAF5000B88CC /* StripeAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeAPI.m; sourceTree = "<group>"; };
+		96DF86D92445F89200309AC0 /* StripePaymentIntent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripePaymentIntent.h; sourceTree = "<group>"; };
+		96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentIntent.m; sourceTree = "<group>"; };
+		96DF86DD2445FC6200309AC0 /* BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
+		96DF86DE2445FC6200309AC0 /* BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAPI.m; sourceTree = "<group>"; };
 		BAD915A7E15EA3A49E58D22C /* Pods-FPCMealServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-FPCMealServiceTests/Pods-FPCMealServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C960963011C36B47B97FFEEE /* Pods_FPCMealServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCMealServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80109B6868CC3CEB7C1866D /* Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig"; path = "Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +175,7 @@
 		9606357F243C003F00709BA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9606357E243C003F00709BA2 /* FPCMealService.app */,
+				9606357E243C003F00709BA2 /* FPC Meal Service.app */,
 				96063596243C004000709BA2 /* FPCMealServiceTests.xctest */,
 				960635A1243C004000709BA2 /* FPCMealServiceUITests.xctest */,
 			);
@@ -172,6 +185,7 @@
 		96063580243C003F00709BA2 /* FPCMealService */ = {
 			isa = PBXGroup;
 			children = (
+				9602117524494339007F44F3 /* FPCMealService.entitlements */,
 				96761E7C243C165D001CBB53 /* Models */,
 				96761E7D243C1674001CBB53 /* Categories */,
 				96761E7E243C167D001CBB53 /* Classes */,
@@ -265,6 +279,15 @@
 			path = PayNow;
 			sourceTree = "<group>";
 		};
+		960CD11C244E36ED00319678 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				960CD11D244E370C00319678 /* PayNowTableViewCell.h */,
+				960CD11E244E370C00319678 /* PayNowTableViewCell.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
 		96761E7C243C165D001CBB53 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +316,7 @@
 		96761E7F243C1684001CBB53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				960CD11C244E36ED00319678 /* UITableViewCell */,
 				96761E8C243C1815001CBB53 /* UICollectionViewCell */,
 				96761E8D243C1821001CBB53 /* UIView */,
 			);
@@ -324,6 +348,8 @@
 		96761E82243C169F001CBB53 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				96DF86D62445F85000309AC0 /* Models */,
+				96DF86D72445F85900309AC0 /* API */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -424,6 +450,50 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		968519502445FADD000B88CC /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				968519512445FAF5000B88CC /* StripeAPI.h */,
+				968519522445FAF5000B88CC /* StripeAPI.m */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		96DF86D62445F85000309AC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86D82445F86C00309AC0 /* Stripe */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96DF86D72445F85900309AC0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86DC2445FC4D00309AC0 /* Base */,
+				968519502445FADD000B88CC /* Stripe */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		96DF86D82445F86C00309AC0 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86D92445F89200309AC0 /* StripePaymentIntent.h */,
+				96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		96DF86DC2445FC4D00309AC0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86DD2445FC6200309AC0 /* BaseAPI.h */,
+				96DF86DE2445FC6200309AC0 /* BaseAPI.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,7 +513,7 @@
 			);
 			name = FPCMealService;
 			productName = FPCMealService;
-			productReference = 9606357E243C003F00709BA2 /* FPCMealService.app */;
+			productReference = 9606357E243C003F00709BA2 /* FPC Meal Service.app */;
 			productType = "com.apple.product-type.application";
 		};
 		96063595243C004000709BA2 /* FPCMealServiceTests */ = {
@@ -668,11 +738,15 @@
 				96067ADA243D7B71007DC90C /* IGListDiffableArray.m in Sources */,
 				96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */,
 				96067AE8243D89EF007DC90C /* MenuItemSideView.m in Sources */,
+				968519532445FAF5000B88CC /* StripeAPI.m in Sources */,
 				96067AD7243D7B0C007DC90C /* MenuCollection.m in Sources */,
 				96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */,
 				96067AD4243D6D1E007DC90C /* UIColor+ExtensionMethods.m in Sources */,
+				96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */,
 				96063583243C003F00709BA2 /* AppDelegate.m in Sources */,
+				96DF86DF2445FC6200309AC0 /* BaseAPI.m in Sources */,
 				96067AE2243D7DAA007DC90C /* MenuCollectionViewCell.m in Sources */,
+				960CD11F244E370C00319678 /* PayNowTableViewCell.m in Sources */,
 				96067AD1243D6145007DC90C /* HomeViewController.m in Sources */,
 				96067AE5243D7DEC007DC90C /* MenuItem.m in Sources */,
 			);
@@ -838,15 +912,16 @@
 			baseConfigurationReference = 09DB010384AEF86D53EC0144 /* Pods-FPCMealService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FPCMealService/FPCMealService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = "$(SRCROOT)/FPCMealService/Resources/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rut.FPCMealService;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rutkoski.fpc.FPCMealService;
+				PRODUCT_NAME = "FPC Meal Service";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -856,15 +931,16 @@
 			baseConfigurationReference = 2D5F3771FAE15E8B9FC77CA3 /* Pods-FPCMealService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FPCMealService/FPCMealService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = "$(SRCROOT)/FPCMealService/Resources/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rut.FPCMealService;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rutkoski.fpc.FPCMealService;
+				PRODUCT_NAME = "FPC Meal Service";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -875,7 +951,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -895,7 +971,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -914,7 +990,7 @@
 			baseConfigurationReference = 19C57E716B58FE0B00981761 /* Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -933,7 +1009,7 @@
 			baseConfigurationReference = D80109B6868CC3CEB7C1866D /* Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -88,7 +88,7 @@
 
 - (UIFont *)font {
     if (!_font) {
-        _font = [UIFont fontWithName:@"HoeflerText-Regular" size:16];
+        _font = [UIFont fontWithName:@"Optima-Regular" size:16];
     }
     return _font;
 }

@@ -42,6 +42,10 @@
 @property (strong, nonatomic) UIView *viewFooter;
 
 @property (strong, nonatomic) UILabel *labelHeader;
+@property (strong, nonatomic) UILabel *labelTotal;
+
+@property (strong, nonatomic) NSNumber *total;
+@property (strong, nonatomic) NSArray *menuItems;
 
 #pragma mark - Public API
 

@@ -11,6 +11,8 @@
 // Delegates
 
 // Utilities
+#import <Stripe/Stripe.h>
+#import <MessageUI/MessageUI.h>
 
 // Globals
 
@@ -27,7 +29,7 @@
 // Definitions
 
 
-@interface PayNowViewController : BaseViewController
+@interface PayNowViewController : BaseViewController <PKPaymentAuthorizationViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate>
 
 
 #pragma mark - Custom Delegates
@@ -37,6 +39,7 @@
 
 
 #pragma mark - Properties
+@property (strong, nonatomic) NSMutableArray *items;
 
 
 #pragma mark - Public API

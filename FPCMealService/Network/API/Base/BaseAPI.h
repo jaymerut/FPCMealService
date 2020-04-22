@@ -1,8 +1,8 @@
 //
-//  MenuItem.h
+//  BaseAPI.h
 //  FPCMealService
 //
-//  Created by Jayme Rutkoski on 4/7/20.
+//  Created by Jayme Rutkoski on 4/14/20.
 //  Copyright © 2020 jrutkosk. All rights reserved.
 //
 
@@ -27,7 +27,7 @@
 // Definitions
 
 
-@interface MenuItem : NSObject
+@interface BaseAPI : NSObject
 
 
 #pragma mark - Custom Delegates
@@ -40,17 +40,10 @@
 
 
 #pragma mark - Properties
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *price;
-@property (strong, nonatomic) NSNumber *priceValue;
-@property (strong, nonatomic) NSString *itemDescription;
-@property (strong, nonatomic) NSArray *sides;
-@property (strong, nonatomic) NSNumber *quantity;
-@property (nonatomic) BOOL showButton;
 
 
 #pragma mark - Public API
-
+- (void)request:(NSString *)url method:(NSString *)method parameters:(NSDictionary *)parameters success:(void (^)(id object))success failure:(void (^)(NSError *error))failure;
 
 
 @end

@@ -1,8 +1,8 @@
 //
-//  MenuCollection.h
+//  PayNowTableViewCell.h
 //  FPCMealService
 //
-//  Created by Jayme Rutkoski on 4/7/20.
+//  Created by Jayme Rutkoski on 4/20/20.
 //  Copyright © 2020 jrutkosk. All rights reserved.
 //
 
@@ -17,20 +17,18 @@
 // Classes
 
 // Classes - Models
+#import "MenuItem.h"
 
 // Classes - Views
 
 // Classes - View Controllers
-
-// Classes - Controllers
-#import "MenuSectionController.h"
 
 // Class Extensions
 
 // Definitions
 
 
-@interface MenuCollection : UIView
+@interface PayNowTableViewCell : UITableViewCell
 
 
 #pragma mark - Custom Delegates
@@ -40,13 +38,10 @@
 
 
 #pragma mark - Properties
-@property (weak, nonatomic) id<MenuSectionControllerDelegate> viewController;
-
-@property (strong, nonatomic) NSArray *menuItems;
-
+@property (strong, nonatomic) MenuItem *item;
 
 #pragma mark - Public API
-
+- (void)updateWithItem:(MenuItem *)item;
 
 
 @end

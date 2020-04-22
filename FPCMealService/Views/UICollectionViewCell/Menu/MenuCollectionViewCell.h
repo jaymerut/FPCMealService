@@ -23,6 +23,9 @@
 
 // Classes - View Controllers
 
+// Classes - Controllers
+#import "MenuSectionController.h"
+
 // Class Extensions
 
 // Definitions
@@ -32,7 +35,7 @@
 
 
 #pragma mark - Custom Delegates
-
+@property (weak, nonatomic) id <MenuSectionControllerDelegate> delegate;
 
 #pragma mark - Initialization
 
@@ -42,7 +45,13 @@
 
 
 #pragma mark - Public API
+- (UILabel *)labelName;
+- (UILabel *)labelPrice;
+- (UILabel *)labelDescription;
+- (UILabel *)labelQuantity;
+- (UILabel *)labelSideTitle;
+- (UILabel *)labelSides;
+
 - (void)update;
-- (void)updateWithMenuItem:(MenuItem *)menuItem;
 
 @end

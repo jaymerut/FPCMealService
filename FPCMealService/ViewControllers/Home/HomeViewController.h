@@ -23,12 +23,15 @@
 // Classes - View Controllers
 #import "BaseViewController.h"
 
+// Classes - Controllers
+#import "MenuSectionController.h"
+
 // Class Extensions
 
 // Definitions
 
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseViewController <MenuSectionControllerDelegate>
 
 
 #pragma mark - Custom Delegates

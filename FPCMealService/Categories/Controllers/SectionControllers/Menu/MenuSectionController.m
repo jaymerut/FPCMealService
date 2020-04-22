@@ -11,6 +11,7 @@
 // Delegates
 
 // Utilities
+#import <Masonry/Masonry.h>
 
 // Globals
 
@@ -54,6 +55,18 @@
     return self;
 }
 
+- (instancetype)initWithDelegate:(id <MenuSectionControllerDelegate>)delegate {
+    if (self = [super init]) {
+        [self customInitMenuSectionController];
+        
+        _delegate = delegate;
+    }
+    return self;
+}
+
++ (instancetype)controllerWithDelegate:(id <MenuSectionControllerDelegate>)delegate {
+    return [[MenuSectionController alloc] initWithDelegate:delegate];
+}
 
 
 #pragma mark - IBOutlets
@@ -79,7 +92,30 @@
     
     MenuItem *menuItem = [self.menuItems objectAtIndex:index];
     
-    [cell updateWithMenuItem:menuItem];
+    cell.labelName.text = menuItem.name;
+    cell.labelPrice.text = menuItem.price;
+    cell.labelDescription.text = menuItem.itemDescription;
+    cell.labelQuantity.text = [NSString stringWithFormat:@"Quantity: %@", menuItem.quantity.stringValue];
+    cell.menuItem = menuItem;
+    
+    NSString *sides = @"";
+    NSString *sideTitle = @"";
+    
+    if (menuItem.sides.count > 0) {
+        for (NSString *side in menuItem.sides) {
+            if (sides.length == 0) {
+                sides = [NSString stringWithFormat:@"\t%@", side];
+            } else {
+                sides = [NSString stringWithFormat:@"\t%@\n\t%@", sides, side];
+            }
+        }
+        sideTitle = @"Sides:";
+    }
+    cell.labelSideTitle.text = sideTitle;
+    cell.labelSides.text = sides;
+    cell.delegate = self.delegate;
+    
+    [cell update];
     
     return cell;
 }

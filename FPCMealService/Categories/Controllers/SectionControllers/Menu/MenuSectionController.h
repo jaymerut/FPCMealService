@@ -17,6 +17,7 @@
 // Classes
 
 // Classes - Models
+#import "MenuItem.h"
 
 // Classes - Views
 
@@ -26,15 +27,24 @@
 
 // Definitions
 
+@protocol MenuSectionControllerDelegate <NSObject>
+
+- (void)didAddOrder:(MenuItem *)item;
+- (void)didRemoveOrder:(MenuItem *)item;
+
+@end
 
 @interface MenuSectionController : IGListSectionController
 
 
 #pragma mark - Custom Delegates
+@property (weak, nonatomic) id <MenuSectionControllerDelegate> delegate;
 
 
 #pragma mark - Initialization
+- (instancetype)initWithDelegate:(id <MenuSectionControllerDelegate>)delegate;
 
++ (instancetype)controllerWithDelegate:(id <MenuSectionControllerDelegate>)delegate;
 
 #pragma mark - IBOutlets
 
