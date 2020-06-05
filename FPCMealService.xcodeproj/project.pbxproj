@@ -3,18 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		96063583243C003F00709BA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96063582243C003F00709BA2 /* AppDelegate.m */; };
-		96063586243C003F00709BA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96063585243C003F00709BA2 /* ViewController.m */; };
-		96063589243C003F00709BA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96063587243C003F00709BA2 /* Main.storyboard */; };
 		9606358B243C004000709BA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9606358A243C004000709BA2 /* Assets.xcassets */; };
 		9606358E243C004000709BA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9606358C243C004000709BA2 /* LaunchScreen.storyboard */; };
 		96063591243C004000709BA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96063590243C004000709BA2 /* main.m */; };
 		9606359B243C004000709BA2 /* FPCMealServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9606359A243C004000709BA2 /* FPCMealServiceTests.m */; };
 		960635A6243C004000709BA2 /* FPCMealServiceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 960635A5243C004000709BA2 /* FPCMealServiceUITests.m */; };
+		96067ACE243D329C007DC90C /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067ACD243D329C007DC90C /* SideMenuViewController.m */; };
+		96067AD1243D6145007DC90C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AD0243D6145007DC90C /* HomeViewController.m */; };
+		96067AD4243D6D1E007DC90C /* UIColor+ExtensionMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AD3243D6D1E007DC90C /* UIColor+ExtensionMethods.m */; };
+		96067AD7243D7B0C007DC90C /* MenuCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AD6243D7B0C007DC90C /* MenuCollection.m */; };
+		96067ADA243D7B71007DC90C /* IGListDiffableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AD9243D7B71007DC90C /* IGListDiffableArray.m */; };
+		96067ADE243D7D01007DC90C /* MenuSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067ADD243D7D01007DC90C /* MenuSectionController.m */; };
+		96067AE2243D7DAA007DC90C /* MenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AE1243D7DAA007DC90C /* MenuCollectionViewCell.m */; };
+		96067AE5243D7DEC007DC90C /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AE4243D7DEC007DC90C /* MenuItem.m */; };
+		96067AE8243D89EF007DC90C /* MenuItemSideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067AE7243D89EF007DC90C /* MenuItemSideView.m */; };
+		96067B0F243EC2E2007DC90C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B0E243EC2E2007DC90C /* BaseViewController.m */; };
+		96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B12243EC9A8007DC90C /* ContactUsViewController.m */; };
+		96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B16243EC9CD007DC90C /* PayNowViewController.m */; };
+		960CD11F244E370C00319678 /* PayNowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960CD11E244E370C00319678 /* PayNowTableViewCell.m */; };
+		9679AEC72488885200A541C3 /* MockableMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AEC62488885200A541C3 /* MockableMenuModel.m */; };
+		9679AECA248891B400A541C3 /* MockableDayMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AEC9248891B400A541C3 /* MockableDayMenu.m */; };
+		968519532445FAF5000B88CC /* StripeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 968519522445FAF5000B88CC /* StripeAPI.m */; };
+		96894A20248759600026A058 /* MockableAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96894A1F248759600026A058 /* MockableAPI.m */; };
+		96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */; };
+		96DF86DF2445FC6200309AC0 /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DE2445FC6200309AC0 /* BaseAPI.m */; };
+		D5929A761F806624542E943B /* Pods_FPCMealService_FPCMealServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB03CF3F5981E90B3CA1CB5 /* Pods_FPCMealService_FPCMealServiceUITests.framework */; };
+		F2FE4A89E25F0E0E8F0F9C3D /* Pods_FPCMealService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10532FD4BF320D724520C3AE /* Pods_FPCMealService.framework */; };
+		F66D5FA9E31C9AB1C21A4ECE /* Pods_FPCMealServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C960963011C36B47B97FFEEE /* Pods_FPCMealServiceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9606357E243C003F00709BA2 /* FPCMealService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPCMealService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09DB010384AEF86D53EC0144 /* Pods-FPCMealService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService.debug.xcconfig"; path = "Target Support Files/Pods-FPCMealService/Pods-FPCMealService.debug.xcconfig"; sourceTree = "<group>"; };
+		10532FD4BF320D724520C3AE /* Pods_FPCMealService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCMealService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C57E716B58FE0B00981761 /* Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig"; path = "Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D5F3771FAE15E8B9FC77CA3 /* Pods-FPCMealService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService.release.xcconfig"; path = "Target Support Files/Pods-FPCMealService/Pods-FPCMealService.release.xcconfig"; sourceTree = "<group>"; };
+		686A6816CFDD4D7FE880A274 /* Pods-FPCMealServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealServiceTests.release.xcconfig"; path = "Target Support Files/Pods-FPCMealServiceTests/Pods-FPCMealServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		9602117524494339007F44F3 /* FPCMealService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FPCMealService.entitlements; sourceTree = "<group>"; };
+		9606357E243C003F00709BA2 /* FPC Meal Service.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FPC Meal Service.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96063581243C003F00709BA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		96063582243C003F00709BA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96063584243C003F00709BA2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96063585243C003F00709BA2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		96063588243C003F00709BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9606358A243C004000709BA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9606358D243C004000709BA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9606358F243C004000709BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +74,48 @@
 		960635A1243C004000709BA2 /* FPCMealServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPCMealServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		960635A5243C004000709BA2 /* FPCMealServiceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPCMealServiceUITests.m; sourceTree = "<group>"; };
 		960635A7243C004000709BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96067ACC243D329C007DC90C /* SideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		96067ACD243D329C007DC90C /* SideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		96067ACF243D6145007DC90C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		96067AD0243D6145007DC90C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		96067AD2243D6BE7007DC90C /* UIColor+ExtensionMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ExtensionMethods.h"; sourceTree = "<group>"; };
+		96067AD3243D6D1E007DC90C /* UIColor+ExtensionMethods.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ExtensionMethods.m"; sourceTree = "<group>"; };
+		96067AD5243D7B0C007DC90C /* MenuCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuCollection.h; sourceTree = "<group>"; };
+		96067AD6243D7B0C007DC90C /* MenuCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuCollection.m; sourceTree = "<group>"; };
+		96067AD8243D7B71007DC90C /* IGListDiffableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGListDiffableArray.h; sourceTree = "<group>"; };
+		96067AD9243D7B71007DC90C /* IGListDiffableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGListDiffableArray.m; sourceTree = "<group>"; };
+		96067ADC243D7D01007DC90C /* MenuSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuSectionController.h; sourceTree = "<group>"; };
+		96067ADD243D7D01007DC90C /* MenuSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuSectionController.m; sourceTree = "<group>"; };
+		96067AE0243D7DAA007DC90C /* MenuCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuCollectionViewCell.h; sourceTree = "<group>"; };
+		96067AE1243D7DAA007DC90C /* MenuCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionViewCell.m; sourceTree = "<group>"; };
+		96067AE3243D7DEC007DC90C /* MenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		96067AE4243D7DEC007DC90C /* MenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		96067AE6243D89EF007DC90C /* MenuItemSideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItemSideView.h; sourceTree = "<group>"; };
+		96067AE7243D89EF007DC90C /* MenuItemSideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItemSideView.m; sourceTree = "<group>"; };
+		96067B0D243EC2E2007DC90C /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		96067B0E243EC2E2007DC90C /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		96067B11243EC9A8007DC90C /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		96067B12243EC9A8007DC90C /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
+		96067B15243EC9CD007DC90C /* PayNowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNowViewController.h; sourceTree = "<group>"; };
+		96067B16243EC9CD007DC90C /* PayNowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowViewController.m; sourceTree = "<group>"; };
+		960CD11D244E370C00319678 /* PayNowTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNowTableViewCell.h; sourceTree = "<group>"; };
+		960CD11E244E370C00319678 /* PayNowTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowTableViewCell.m; sourceTree = "<group>"; };
+		9679AEC52488885200A541C3 /* MockableMenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableMenuModel.h; sourceTree = "<group>"; };
+		9679AEC62488885200A541C3 /* MockableMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableMenuModel.m; sourceTree = "<group>"; };
+		9679AEC8248891B400A541C3 /* MockableDayMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableDayMenu.h; sourceTree = "<group>"; };
+		9679AEC9248891B400A541C3 /* MockableDayMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableDayMenu.m; sourceTree = "<group>"; };
+		968519512445FAF5000B88CC /* StripeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripeAPI.h; sourceTree = "<group>"; };
+		968519522445FAF5000B88CC /* StripeAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeAPI.m; sourceTree = "<group>"; };
+		96894A1E248759600026A058 /* MockableAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableAPI.h; sourceTree = "<group>"; };
+		96894A1F248759600026A058 /* MockableAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableAPI.m; sourceTree = "<group>"; };
+		96DF86D92445F89200309AC0 /* StripePaymentIntent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripePaymentIntent.h; sourceTree = "<group>"; };
+		96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentIntent.m; sourceTree = "<group>"; };
+		96DF86DD2445FC6200309AC0 /* BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
+		96DF86DE2445FC6200309AC0 /* BaseAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAPI.m; sourceTree = "<group>"; };
+		BAD915A7E15EA3A49E58D22C /* Pods-FPCMealServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-FPCMealServiceTests/Pods-FPCMealServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C960963011C36B47B97FFEEE /* Pods_FPCMealServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCMealServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80109B6868CC3CEB7C1866D /* Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig"; path = "Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FCB03CF3F5981E90B3CA1CB5 /* Pods_FPCMealService_FPCMealServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPCMealService_FPCMealServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FE4A89E25F0E0E8F0F9C3D /* Pods_FPCMealService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66D5FA9E31C9AB1C21A4ECE /* Pods_FPCMealServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +139,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5929A761F806624542E943B /* Pods_FPCMealService_FPCMealServiceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1752573F957CBED7234BFAB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10532FD4BF320D724520C3AE /* Pods_FPCMealService.framework */,
+				FCB03CF3F5981E90B3CA1CB5 /* Pods_FPCMealService_FPCMealServiceUITests.framework */,
+				C960963011C36B47B97FFEEE /* Pods_FPCMealServiceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BBBEF3B03CD8B53DC337D98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09DB010384AEF86D53EC0144 /* Pods-FPCMealService.debug.xcconfig */,
+				2D5F3771FAE15E8B9FC77CA3 /* Pods-FPCMealService.release.xcconfig */,
+				19C57E716B58FE0B00981761 /* Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig */,
+				D80109B6868CC3CEB7C1866D /* Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig */,
+				BAD915A7E15EA3A49E58D22C /* Pods-FPCMealServiceTests.debug.xcconfig */,
+				686A6816CFDD4D7FE880A274 /* Pods-FPCMealServiceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		96063575243C003F00709BA2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,13 +176,15 @@
 				96063599243C004000709BA2 /* FPCMealServiceTests */,
 				960635A4243C004000709BA2 /* FPCMealServiceUITests */,
 				9606357F243C003F00709BA2 /* Products */,
+				8BBBEF3B03CD8B53DC337D98 /* Pods */,
+				1752573F957CBED7234BFAB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		9606357F243C003F00709BA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9606357E243C003F00709BA2 /* FPCMealService.app */,
+				9606357E243C003F00709BA2 /* FPC Meal Service.app */,
 				96063596243C004000709BA2 /* FPCMealServiceTests.xctest */,
 				960635A1243C004000709BA2 /* FPCMealServiceUITests.xctest */,
 			);
@@ -101,15 +194,15 @@
 		96063580243C003F00709BA2 /* FPCMealService */ = {
 			isa = PBXGroup;
 			children = (
-				96063581243C003F00709BA2 /* AppDelegate.h */,
-				96063582243C003F00709BA2 /* AppDelegate.m */,
-				96063584243C003F00709BA2 /* ViewController.h */,
-				96063585243C003F00709BA2 /* ViewController.m */,
-				96063587243C003F00709BA2 /* Main.storyboard */,
-				9606358A243C004000709BA2 /* Assets.xcassets */,
-				9606358C243C004000709BA2 /* LaunchScreen.storyboard */,
-				9606358F243C004000709BA2 /* Info.plist */,
-				96063590243C004000709BA2 /* main.m */,
+				9602117524494339007F44F3 /* FPCMealService.entitlements */,
+				96761E7C243C165D001CBB53 /* Models */,
+				96761E7D243C1674001CBB53 /* Categories */,
+				96761E7E243C167D001CBB53 /* Classes */,
+				96761E7F243C1684001CBB53 /* Views */,
+				96761E80243C168A001CBB53 /* ViewControllers */,
+				96761E82243C169F001CBB53 /* Network */,
+				96761E81243C1694001CBB53 /* Resources */,
+				96761E83243C16A9001CBB53 /* AppDelegate */,
 			);
 			path = FPCMealService;
 			sourceTree = "<group>";
@@ -132,6 +225,314 @@
 			path = FPCMealServiceUITests;
 			sourceTree = "<group>";
 		};
+		96067ACA243D3276007DC90C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				96067ACF243D6145007DC90C /* HomeViewController.h */,
+				96067AD0243D6145007DC90C /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		96067ACB243D327C007DC90C /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				96067ACC243D329C007DC90C /* SideMenuViewController.h */,
+				96067ACD243D329C007DC90C /* SideMenuViewController.m */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		96067ADB243D7CDF007DC90C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				96067ADC243D7D01007DC90C /* MenuSectionController.h */,
+				96067ADD243D7D01007DC90C /* MenuSectionController.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		96067ADF243D7D9B007DC90C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				96067AE0243D7DAA007DC90C /* MenuCollectionViewCell.h */,
+				96067AE1243D7DAA007DC90C /* MenuCollectionViewCell.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		96067B0C243EC2CC007DC90C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96067B0D243EC2E2007DC90C /* BaseViewController.h */,
+				96067B0E243EC2E2007DC90C /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		96067B10243EC98E007DC90C /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				96067B11243EC9A8007DC90C /* ContactUsViewController.h */,
+				96067B12243EC9A8007DC90C /* ContactUsViewController.m */,
+			);
+			path = ContactUs;
+			sourceTree = "<group>";
+		};
+		96067B14243EC9BC007DC90C /* PayNow */ = {
+			isa = PBXGroup;
+			children = (
+				96067B15243EC9CD007DC90C /* PayNowViewController.h */,
+				96067B16243EC9CD007DC90C /* PayNowViewController.m */,
+			);
+			path = PayNow;
+			sourceTree = "<group>";
+		};
+		960CD11C244E36ED00319678 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				960CD11D244E370C00319678 /* PayNowTableViewCell.h */,
+				960CD11E244E370C00319678 /* PayNowTableViewCell.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		96761E7C243C165D001CBB53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96761E8B243C17FF001CBB53 /* Local */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96761E7D243C1674001CBB53 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				96761E89243C17EE001CBB53 /* Helpers */,
+				96761E88243C17E9001CBB53 /* Controllers */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		96761E7E243C167D001CBB53 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				96761E87243C17DE001CBB53 /* CustomCategories */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		96761E7F243C1684001CBB53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				960CD11C244E36ED00319678 /* UITableViewCell */,
+				96761E8C243C1815001CBB53 /* UICollectionViewCell */,
+				96761E8D243C1821001CBB53 /* UIView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96761E80243C168A001CBB53 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96067B14243EC9BC007DC90C /* PayNow */,
+				96067B10243EC98E007DC90C /* ContactUs */,
+				96067B0C243EC2CC007DC90C /* Base */,
+				96067ACB243D327C007DC90C /* SideMenu */,
+				96067ACA243D3276007DC90C /* Home */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		96761E81243C1694001CBB53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96761E84243C1709001CBB53 /* Storyboards */,
+				96761E85243C1751001CBB53 /* Supporting */,
+				96761E86243C1759001CBB53 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96761E82243C169F001CBB53 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				96894A18248751A80026A058 /* Classes */,
+				96DF86D62445F85000309AC0 /* Models */,
+				96DF86D72445F85900309AC0 /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		96761E83243C16A9001CBB53 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				96063581243C003F00709BA2 /* AppDelegate.h */,
+				96063582243C003F00709BA2 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		96761E84243C1709001CBB53 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9606358C243C004000709BA2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		96761E85243C1751001CBB53 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				9606358F243C004000709BA2 /* Info.plist */,
+				96063590243C004000709BA2 /* main.m */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		96761E86243C1759001CBB53 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9606358A243C004000709BA2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		96761E87243C17DE001CBB53 /* CustomCategories */ = {
+			isa = PBXGroup;
+			children = (
+				96067AD2243D6BE7007DC90C /* UIColor+ExtensionMethods.h */,
+				96067AD3243D6D1E007DC90C /* UIColor+ExtensionMethods.m */,
+			);
+			path = CustomCategories;
+			sourceTree = "<group>";
+		};
+		96761E88243C17E9001CBB53 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96761E8A243C17F5001CBB53 /* SectionControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96761E89243C17EE001CBB53 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96761E8A243C17F5001CBB53 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96067ADB243D7CDF007DC90C /* Menu */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
+		96761E8B243C17FF001CBB53 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				96067AD8243D7B71007DC90C /* IGListDiffableArray.h */,
+				96067AD9243D7B71007DC90C /* IGListDiffableArray.m */,
+				96067AE3243D7DEC007DC90C /* MenuItem.h */,
+				96067AE4243D7DEC007DC90C /* MenuItem.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		96761E8C243C1815001CBB53 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				96067ADF243D7D9B007DC90C /* Menu */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		96761E8D243C1821001CBB53 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				96067AD5243D7B0C007DC90C /* MenuCollection.h */,
+				96067AD6243D7B0C007DC90C /* MenuCollection.m */,
+				96067AE6243D89EF007DC90C /* MenuItemSideView.h */,
+				96067AE7243D89EF007DC90C /* MenuItemSideView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		9679AEC42488883400A541C3 /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				9679AEC52488885200A541C3 /* MockableMenuModel.h */,
+				9679AEC62488885200A541C3 /* MockableMenuModel.m */,
+				9679AEC8248891B400A541C3 /* MockableDayMenu.h */,
+				9679AEC9248891B400A541C3 /* MockableDayMenu.m */,
+			);
+			path = Mockable;
+			sourceTree = "<group>";
+		};
+		968519502445FADD000B88CC /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				968519512445FAF5000B88CC /* StripeAPI.h */,
+				968519522445FAF5000B88CC /* StripeAPI.m */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		96894A18248751A80026A058 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		96894A1D248758F40026A058 /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				96894A1E248759600026A058 /* MockableAPI.h */,
+				96894A1F248759600026A058 /* MockableAPI.m */,
+			);
+			path = Mockable;
+			sourceTree = "<group>";
+		};
+		96DF86D62445F85000309AC0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9679AEC42488883400A541C3 /* Mockable */,
+				96DF86D82445F86C00309AC0 /* Stripe */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96DF86D72445F85900309AC0 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86DC2445FC4D00309AC0 /* Base */,
+				968519502445FADD000B88CC /* Stripe */,
+				96894A1D248758F40026A058 /* Mockable */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		96DF86D82445F86C00309AC0 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86D92445F89200309AC0 /* StripePaymentIntent.h */,
+				96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
+		96DF86DC2445FC4D00309AC0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				96DF86DD2445FC6200309AC0 /* BaseAPI.h */,
+				96DF86DE2445FC6200309AC0 /* BaseAPI.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +540,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 960635AA243C004000709BA2 /* Build configuration list for PBXNativeTarget "FPCMealService" */;
 			buildPhases = (
+				77CA1CD080633307B49B418E /* [CP] Check Pods Manifest.lock */,
 				9606357A243C003F00709BA2 /* Sources */,
 				9606357B243C003F00709BA2 /* Frameworks */,
 				9606357C243C003F00709BA2 /* Resources */,
+				96A22764EFD09FBE30A59A8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,13 +552,14 @@
 			);
 			name = FPCMealService;
 			productName = FPCMealService;
-			productReference = 9606357E243C003F00709BA2 /* FPCMealService.app */;
+			productReference = 9606357E243C003F00709BA2 /* FPC Meal Service.app */;
 			productType = "com.apple.product-type.application";
 		};
 		96063595243C004000709BA2 /* FPCMealServiceTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 960635AD243C004000709BA2 /* Build configuration list for PBXNativeTarget "FPCMealServiceTests" */;
 			buildPhases = (
+				C47F2379BB5BC3A854F502F8 /* [CP] Check Pods Manifest.lock */,
 				96063592243C004000709BA2 /* Sources */,
 				96063593243C004000709BA2 /* Frameworks */,
 				96063594243C004000709BA2 /* Resources */,
@@ -174,9 +578,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 960635B0243C004000709BA2 /* Build configuration list for PBXNativeTarget "FPCMealServiceUITests" */;
 			buildPhases = (
+				DE906F69AD89B99DB5638082 /* [CP] Check Pods Manifest.lock */,
 				9606359D243C004000709BA2 /* Sources */,
 				9606359E243C004000709BA2 /* Frameworks */,
 				9606359F243C004000709BA2 /* Resources */,
+				DF7EA20B2AB3A25CD8445CBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +643,6 @@
 			files = (
 				9606358E243C004000709BA2 /* LaunchScreen.storyboard in Resources */,
 				9606358B243C004000709BA2 /* Assets.xcassets in Resources */,
-				96063589243C003F00709BA2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +662,135 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77CA1CD080633307B49B418E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FPCMealService-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96A22764EFD09FBE30A59A8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FPCMealService/Pods-FPCMealService-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FPCMealService/Pods-FPCMealService-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FPCMealService/Pods-FPCMealService-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47F2379BB5BC3A854F502F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FPCMealServiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE906F69AD89B99DB5638082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FPCMealService-FPCMealServiceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF7EA20B2AB3A25CD8445CBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FPCMealService-FPCMealServiceUITests/Pods-FPCMealService-FPCMealServiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9606357A243C003F00709BA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96063586243C003F00709BA2 /* ViewController.m in Sources */,
+				96067ADE243D7D01007DC90C /* MenuSectionController.m in Sources */,
+				96067B0F243EC2E2007DC90C /* BaseViewController.m in Sources */,
+				96067ACE243D329C007DC90C /* SideMenuViewController.m in Sources */,
 				96063591243C004000709BA2 /* main.m in Sources */,
+				96067ADA243D7B71007DC90C /* IGListDiffableArray.m in Sources */,
+				96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */,
+				96067AE8243D89EF007DC90C /* MenuItemSideView.m in Sources */,
+				96894A20248759600026A058 /* MockableAPI.m in Sources */,
+				968519532445FAF5000B88CC /* StripeAPI.m in Sources */,
+				96067AD7243D7B0C007DC90C /* MenuCollection.m in Sources */,
+				9679AEC72488885200A541C3 /* MockableMenuModel.m in Sources */,
+				96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */,
+				9679AECA248891B400A541C3 /* MockableDayMenu.m in Sources */,
+				96067AD4243D6D1E007DC90C /* UIColor+ExtensionMethods.m in Sources */,
+				96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */,
 				96063583243C003F00709BA2 /* AppDelegate.m in Sources */,
+				96DF86DF2445FC6200309AC0 /* BaseAPI.m in Sources */,
+				96067AE2243D7DAA007DC90C /* MenuCollectionViewCell.m in Sources */,
+				960CD11F244E370C00319678 /* PayNowTableViewCell.m in Sources */,
+				96067AD1243D6145007DC90C /* HomeViewController.m in Sources */,
+				96067AE5243D7DEC007DC90C /* MenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +826,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96063587243C003F00709BA2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96063588243C003F00709BA2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9606358C243C004000709BA2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,44 +951,49 @@
 		};
 		960635AB243C004000709BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DB010384AEF86D53EC0144 /* Pods-FPCMealService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FPCMealService/FPCMealService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
-				INFOPLIST_FILE = FPCMealService/Info.plist;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
+				INFOPLIST_FILE = "$(SRCROOT)/FPCMealService/Resources/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rut.FPCMealService;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rutkoski.fpc.FPCMealService;
+				PRODUCT_NAME = "FPC Meal Service";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		960635AC243C004000709BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D5F3771FAE15E8B9FC77CA3 /* Pods-FPCMealService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FPCMealService/FPCMealService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
-				INFOPLIST_FILE = FPCMealService/Info.plist;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
+				INFOPLIST_FILE = "$(SRCROOT)/FPCMealService/Resources/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rut.FPCMealService;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jay.rutkoski.fpc.FPCMealService;
+				PRODUCT_NAME = "FPC Meal Service";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		960635AE243C004000709BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD915A7E15EA3A49E58D22C /* Pods-FPCMealServiceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,10 +1009,11 @@
 		};
 		960635AF243C004000709BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686A6816CFDD4D7FE880A274 /* Pods-FPCMealServiceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,9 +1029,10 @@
 		};
 		960635B1243C004000709BA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19C57E716B58FE0B00981761 /* Pods-FPCMealService-FPCMealServiceUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -523,9 +1048,10 @@
 		};
 		960635B2243C004000709BA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D80109B6868CC3CEB7C1866D /* Pods-FPCMealService-FPCMealServiceUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DGNFF8D7D;
+				DEVELOPMENT_TEAM = BT4J67MR3F;
 				INFOPLIST_FILE = FPCMealServiceUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

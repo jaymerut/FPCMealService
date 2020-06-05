@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-FPCMealService/Pods-FPCMealService-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework
+${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework
