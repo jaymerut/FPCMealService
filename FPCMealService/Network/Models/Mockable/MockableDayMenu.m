@@ -1,12 +1,12 @@
 //
-//  MenuItem.m
+//  MockableDayMenu.m
 //  FPCMealService
 //
-//  Created by Jayme Rutkoski on 4/7/20.
+//  Created by Jayme Rutkoski on 6/3/20.
 //  Copyright © 2020 jrutkosk. All rights reserved.
 //
 
-#import "MenuItem.h"
+#import "MockableDayMenu.h"
 
 // Delegates
 
@@ -26,7 +26,8 @@
 
 // Definitions
 
-@interface MenuItem ()
+
+@interface MockableDayMenu ()
 
 
 
@@ -34,16 +35,16 @@
 
 
 
-@implementation MenuItem
+@implementation MockableDayMenu
 
 
 #pragma mark - Initialization
-- (void)customInitMenuItem {
+- (void)customInitMockableDayMenu {
     
 }
 - (instancetype)init {
     if (self = [super init]) {
-        [self customInitMenuItem];
+        [self customInitMockableDayMenu];
         
     }
     return self;
@@ -56,7 +57,12 @@
 
 
 #pragma mark - Properties
-
+- (NSMutableArray *)menuItems {
+    if (!_menuItems) {
+        _menuItems = [NSMutableArray new];
+    }
+    return _menuItems;
+}
 
 
 #pragma mark - Private API

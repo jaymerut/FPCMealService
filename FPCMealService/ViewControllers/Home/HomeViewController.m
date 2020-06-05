@@ -17,9 +17,11 @@
 // Globals
 
 // Classes
+#import "MockableAPI.h"
 
 // Classes - Models
 #import "MenuItem.h"
+#import "MockableDayMenu.h"
 
 // Classes - Views
 #import "MenuCollection.h"
@@ -39,6 +41,8 @@
 @property (strong, nonatomic) MenuCollection *menuCollection;
 
 @property (strong, nonatomic) NSMutableArray *arrayMenuItems;
+
+@property (strong, nonatomic) MockableAPI *mockableAPI;
 
 @property (strong, nonatomic) NSNumber *weekDay;
 
@@ -123,8 +127,23 @@
         int weekday = [comps weekday];
         self.weekDay = [NSNumber numberWithInt:weekday - 1];
         _segmentedControlHeader.selectedSegmentIndex = self.weekDay.intValue;
-        self.arrayMenuItems = [self populateMenuArrayFromDay:self.weekDay];
-        [self setCurrentDayForMenuItems];
+        if (self.menuItems == nil) {
+            __weak typeof(self) wself = self;
+            [self.mockableAPI getMenuItems:^(MockableMenuModel *menuModel) {
+                __strong typeof(wself) sself = wself;
+                sself.menuItems = menuModel.menuItemList;
+                sself.arrayMenuItems = [self populateMenuArrayFromDay:self.weekDay];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [sself setCurrentDayForMenuItems];
+                });
+            } failure:^(NSError *error) {
+                NSLog(@"Failed");
+            }];
+        } else {
+            self.arrayMenuItems = [self populateMenuArrayFromDay:self.weekDay];
+            [self setCurrentDayForMenuItems];
+        }
+
     }
     return _segmentedControlHeader;
 }
@@ -142,6 +161,13 @@
         _arrayMenuItems = [NSMutableArray new];
     }
     return _arrayMenuItems;
+}
+
+- (MockableAPI *)mockableAPI {
+    if (!_mockableAPI) {
+        _mockableAPI = [MockableAPI new];
+    }
+    return _mockableAPI;
 }
 
 
@@ -184,122 +210,127 @@
     } else {
         [self undoCurrentDayForMenuItems];
     }
-    [self update];
 }
 
 - (void)setCurrentDayForMenuItems {
     for (MenuItem *item in self.arrayMenuItems) {
         item.showButton = YES;
     }
+    [self update];
 }
 - (void)undoCurrentDayForMenuItems {
     for (MenuItem *item in self.arrayMenuItems) {
         item.showButton = NO;
     }
+    [self update];
 }
 
 - (NSMutableArray *)populateMenuArrayFromDay:(NSNumber *)day {
     NSMutableArray *result = [NSMutableArray new];
-    MenuItem *menuItemTest1 = [MenuItem new];
-    MenuItem *menuItemTest2 = [MenuItem new];
-    MenuItem *menuItemTest3 = [MenuItem new];
     
-    if (self.weekDay.intValue == day.intValue && self.menuItems != nil) {
-        result = [NSMutableArray arrayWithArray:self.menuItems];
-    } else if (day.intValue == 0) {
-        menuItemTest1.name = @"Sandwich";
-        menuItemTest1.price = @"$7.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:7.50];
-        menuItemTest1.itemDescription = @"This is a sandwich.";
-        menuItemTest1.quantity = @0;
-        
-        menuItemTest2.name = @"Pasta";
-        menuItemTest2.price = @"$5.50";
-        menuItemTest2.priceValue = [NSNumber numberWithDouble:5.50];
-        menuItemTest2.itemDescription = @"This is a pasta.";
-        menuItemTest2.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1, menuItemTest2]];
+    /*
+     if (self.weekDay.intValue == day.intValue && self.menuItems != nil) {
+         result = [NSMutableArray arrayWithArray:self.menuItems];
+     } else i
+     */
+    if (day.intValue == 0) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Sunday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 1) {
-        menuItemTest1.name = @"Tester";
-        menuItemTest1.price = @"$10.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:10.50];
-        menuItemTest1.itemDescription = @"This is a test.";
-        menuItemTest1.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Monday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 2) {
-        menuItemTest1.name = @"Yogurt";
-        menuItemTest1.price = @"$1.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:1.50];
-        menuItemTest1.itemDescription = @"This is a yogurt.";
-        menuItemTest1.quantity = @0;
-        
-        menuItemTest2.name = @"Meatballs";
-        menuItemTest2.price = @"$5.50";
-        menuItemTest2.priceValue = [NSNumber numberWithDouble:5.50];
-        menuItemTest2.itemDescription = @"This is meatballs.";
-        menuItemTest2.sides = [NSArray arrayWithObject:@"Sauce"];
-        menuItemTest2.quantity = @0;
-        
-        menuItemTest3.name = @"Fish";
-        menuItemTest3.price = @"$2.50";
-        menuItemTest3.priceValue = [NSNumber numberWithDouble:2.50];
-        menuItemTest3.itemDescription = @"This is a fish.";
-        menuItemTest3.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1, menuItemTest2, menuItemTest3]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Tuesday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 3) {
-        menuItemTest1.name = @"Balls";
-        menuItemTest1.price = @"$1.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:1.50];
-        menuItemTest1.itemDescription = @"This is a ball.";
-        menuItemTest1.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Wednesday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 4) {
-        menuItemTest1.name = @"Yogurt";
-        menuItemTest1.price = @"$1.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:1.50];
-        menuItemTest1.itemDescription = @"This is a yogurt.";
-        menuItemTest1.quantity = @0;
-        
-        menuItemTest2.name = @"Meatballs";
-        menuItemTest2.price = @"$5.50";
-        menuItemTest2.priceValue = [NSNumber numberWithDouble:5.50];
-        menuItemTest2.itemDescription = @"This is meatballs.";
-        menuItemTest2.quantity = @0;
-        
-        menuItemTest3.name = @"Fish";
-        menuItemTest3.price = @"$2.50";
-        menuItemTest3.priceValue = [NSNumber numberWithDouble:2.50];
-        menuItemTest3.itemDescription = @"This is a fish.";
-        menuItemTest3.sides = [NSArray arrayWithObject:@"Sauce"];
-        menuItemTest3.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1, menuItemTest2, menuItemTest3]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Thursday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 5) {
-        menuItemTest1.name = @"Hamburger";
-        menuItemTest1.price = @"$7.50";
-        menuItemTest1.priceValue = [NSNumber numberWithDouble:7.50];
-        menuItemTest1.itemDescription = @"This is a hamburger.";
-        menuItemTest1.sides = [NSArray arrayWithObject:@"Potatoes"];
-        menuItemTest1.quantity = @0;
-
-        menuItemTest2.name = @"Pizza";
-        menuItemTest2.price = @"$9.50";
-        menuItemTest2.priceValue = [NSNumber numberWithDouble:9.50];
-        menuItemTest2.itemDescription = @"This is a pizza";
-        menuItemTest2.quantity = @0;
-        
-        result = [NSMutableArray arrayWithArray:@[menuItemTest1, menuItemTest2]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Friday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     } else if (day.intValue == 6) {
-        
-        result = [NSMutableArray arrayWithArray:@[]];
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Saturday"]) {
+                result = item.menuItems;
+                if (self.weekDay.intValue == day.intValue) { item.isCurrentDay = @YES; }
+            }
+        }
     }
     return result;
 }
 
+- (void)updateMenuItems:(NSMutableArray *)arrayMenuItems {
+    if (self.weekDay.intValue == 0) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Sunday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 1) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Monday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 2) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Tuesday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 3) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Wednesday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 4) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Thursday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 5) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Friday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    } else if (self.weekDay.intValue == 6) {
+        for (MockableDayMenu *item in self.menuItems) {
+            if ([item.day isEqualToString:@"Saturday"]) {
+                item.menuItems = arrayMenuItems;
+            }
+        }
+    }
+}
 
 #pragma mark - Public API
 
@@ -314,7 +345,7 @@
             menuItem.quantity = item.quantity;
         }
     }
-    self.menuItems = self.arrayMenuItems;
+    [self updateMenuItems:self.arrayMenuItems];
 }
 - (void)didRemoveOrder:(MenuItem *)item {
     self.total = [NSNumber numberWithDouble:self.total.doubleValue - item.priceValue.doubleValue];
@@ -324,7 +355,7 @@
             menuItem.quantity = item.quantity;
         }
     }
-    self.menuItems = self.arrayMenuItems;
+    [self updateMenuItems:self.arrayMenuItems];
 }
 
 

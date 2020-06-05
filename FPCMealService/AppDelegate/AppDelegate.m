@@ -23,6 +23,7 @@
     SideMenuViewController *rearViewController = [[SideMenuViewController alloc] init];
     
     UINavigationController *frontNavController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    
     UINavigationController *rearNavController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavController frontViewController:frontNavController];

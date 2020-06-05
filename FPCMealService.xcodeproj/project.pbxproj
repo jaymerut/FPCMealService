@@ -26,7 +26,10 @@
 		96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B12243EC9A8007DC90C /* ContactUsViewController.m */; };
 		96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96067B16243EC9CD007DC90C /* PayNowViewController.m */; };
 		960CD11F244E370C00319678 /* PayNowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 960CD11E244E370C00319678 /* PayNowTableViewCell.m */; };
+		9679AEC72488885200A541C3 /* MockableMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AEC62488885200A541C3 /* MockableMenuModel.m */; };
+		9679AECA248891B400A541C3 /* MockableDayMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9679AEC9248891B400A541C3 /* MockableDayMenu.m */; };
 		968519532445FAF5000B88CC /* StripeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 968519522445FAF5000B88CC /* StripeAPI.m */; };
+		96894A20248759600026A058 /* MockableAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96894A1F248759600026A058 /* MockableAPI.m */; };
 		96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */; };
 		96DF86DF2445FC6200309AC0 /* BaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF86DE2445FC6200309AC0 /* BaseAPI.m */; };
 		D5929A761F806624542E943B /* Pods_FPCMealService_FPCMealServiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB03CF3F5981E90B3CA1CB5 /* Pods_FPCMealService_FPCMealServiceUITests.framework */; };
@@ -97,8 +100,14 @@
 		96067B16243EC9CD007DC90C /* PayNowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowViewController.m; sourceTree = "<group>"; };
 		960CD11D244E370C00319678 /* PayNowTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayNowTableViewCell.h; sourceTree = "<group>"; };
 		960CD11E244E370C00319678 /* PayNowTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayNowTableViewCell.m; sourceTree = "<group>"; };
+		9679AEC52488885200A541C3 /* MockableMenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableMenuModel.h; sourceTree = "<group>"; };
+		9679AEC62488885200A541C3 /* MockableMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableMenuModel.m; sourceTree = "<group>"; };
+		9679AEC8248891B400A541C3 /* MockableDayMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableDayMenu.h; sourceTree = "<group>"; };
+		9679AEC9248891B400A541C3 /* MockableDayMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableDayMenu.m; sourceTree = "<group>"; };
 		968519512445FAF5000B88CC /* StripeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripeAPI.h; sourceTree = "<group>"; };
 		968519522445FAF5000B88CC /* StripeAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripeAPI.m; sourceTree = "<group>"; };
+		96894A1E248759600026A058 /* MockableAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockableAPI.h; sourceTree = "<group>"; };
+		96894A1F248759600026A058 /* MockableAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockableAPI.m; sourceTree = "<group>"; };
 		96DF86D92445F89200309AC0 /* StripePaymentIntent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StripePaymentIntent.h; sourceTree = "<group>"; };
 		96DF86DA2445F89200309AC0 /* StripePaymentIntent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StripePaymentIntent.m; sourceTree = "<group>"; };
 		96DF86DD2445FC6200309AC0 /* BaseAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
@@ -348,6 +357,7 @@
 		96761E82243C169F001CBB53 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				96894A18248751A80026A058 /* Classes */,
 				96DF86D62445F85000309AC0 /* Models */,
 				96DF86D72445F85900309AC0 /* API */,
 			);
@@ -450,6 +460,17 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		9679AEC42488883400A541C3 /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				9679AEC52488885200A541C3 /* MockableMenuModel.h */,
+				9679AEC62488885200A541C3 /* MockableMenuModel.m */,
+				9679AEC8248891B400A541C3 /* MockableDayMenu.h */,
+				9679AEC9248891B400A541C3 /* MockableDayMenu.m */,
+			);
+			path = Mockable;
+			sourceTree = "<group>";
+		};
 		968519502445FADD000B88CC /* Stripe */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,9 +480,26 @@
 			path = Stripe;
 			sourceTree = "<group>";
 		};
+		96894A18248751A80026A058 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		96894A1D248758F40026A058 /* Mockable */ = {
+			isa = PBXGroup;
+			children = (
+				96894A1E248759600026A058 /* MockableAPI.h */,
+				96894A1F248759600026A058 /* MockableAPI.m */,
+			);
+			path = Mockable;
+			sourceTree = "<group>";
+		};
 		96DF86D62445F85000309AC0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9679AEC42488883400A541C3 /* Mockable */,
 				96DF86D82445F86C00309AC0 /* Stripe */,
 			);
 			path = Models;
@@ -472,6 +510,7 @@
 			children = (
 				96DF86DC2445FC4D00309AC0 /* Base */,
 				968519502445FADD000B88CC /* Stripe */,
+				96894A1D248758F40026A058 /* Mockable */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -738,9 +777,12 @@
 				96067ADA243D7B71007DC90C /* IGListDiffableArray.m in Sources */,
 				96067B17243EC9CD007DC90C /* PayNowViewController.m in Sources */,
 				96067AE8243D89EF007DC90C /* MenuItemSideView.m in Sources */,
+				96894A20248759600026A058 /* MockableAPI.m in Sources */,
 				968519532445FAF5000B88CC /* StripeAPI.m in Sources */,
 				96067AD7243D7B0C007DC90C /* MenuCollection.m in Sources */,
+				9679AEC72488885200A541C3 /* MockableMenuModel.m in Sources */,
 				96067B13243EC9A8007DC90C /* ContactUsViewController.m in Sources */,
+				9679AECA248891B400A541C3 /* MockableDayMenu.m in Sources */,
 				96067AD4243D6D1E007DC90C /* UIColor+ExtensionMethods.m in Sources */,
 				96DF86DB2445F89200309AC0 /* StripePaymentIntent.m in Sources */,
 				96063583243C003F00709BA2 /* AppDelegate.m in Sources */,

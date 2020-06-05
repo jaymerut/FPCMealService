@@ -53,6 +53,8 @@
 
 @property (strong, nonatomic) NSNumber *buttonWidth;
 
+@property (strong, nonatomic) NSNumber *applePaymentDidSucceed;
+
 @end
 
 
@@ -333,6 +335,7 @@
                 message = [NSString stringWithFormat:@"%@Special Requests: ", message];
                 [mailCont setMessageBody:message isHTML:NO];
                 [self presentViewController:mailCont animated:YES completion:nil];
+                [self resetItems];
             }
         }];
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
@@ -380,6 +383,7 @@
         [self.stripeAPI confirmPayment:paymentIntent.paymentID paymentMethod:@"pm_card_visa" success:^(StripePaymentIntent *paymentIntent) {
             NSLog(@"Success");
             result.status = PKPaymentAuthorizationStatusSuccess;
+            self.applePaymentDidSucceed = @YES;
             completion(result);
         } failure:^(NSError *error) {
             NSLog(@"There was an error with Stripe.");
@@ -394,7 +398,9 @@
     
 }
 - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller {
-    [self resetItems];
+    if (self.applePaymentDidSucceed) {
+        [self resetItems];
+    }
     [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -435,7 +441,6 @@
 }
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
-    [self resetItems];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

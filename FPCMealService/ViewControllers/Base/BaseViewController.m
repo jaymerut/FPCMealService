@@ -18,6 +18,7 @@
 // Classes
 
 // Classes - Models
+#import "MockableDayMenu.h"
 
 // Classes - Views
 
@@ -422,9 +423,13 @@ static UIImage *imagePayNowFooter;
 - (NSMutableArray *)arrayForPayment {
     NSMutableArray *array = [NSMutableArray new];
     
-    for (MenuItem *item in self.menuItems) {
-        if (item.quantity.intValue > 0) {
-            [array addObject:item];
+    for (MockableDayMenu *item in self.menuItems) {
+        if (item.isCurrentDay.boolValue) {
+            for (MenuItem *menuItem in item.menuItems) {
+                if (menuItem.quantity.intValue > 0) {
+                    [array addObject:menuItem];
+                }
+            }
         }
     }
     

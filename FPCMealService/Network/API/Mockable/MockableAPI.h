@@ -1,12 +1,12 @@
 //
-//  MenuItem.m
+//  MockableAPI.h
 //  FPCMealService
 //
-//  Created by Jayme Rutkoski on 4/7/20.
+//  Created by Jayme Rutkoski on 6/2/20.
 //  Copyright © 2020 jrutkosk. All rights reserved.
 //
 
-#import "MenuItem.h"
+#import "BaseAPI.h"
 
 // Delegates
 
@@ -17,6 +17,7 @@
 // Classes
 
 // Classes - Models
+#import "MockableMenuModel.h"
 
 // Classes - Views
 
@@ -26,49 +27,24 @@
 
 // Definitions
 
-@interface MenuItem ()
+
+@interface MockableAPI : BaseAPI
 
 
-
-@end
-
-
-
-@implementation MenuItem
+#pragma mark - Custom Delegates
 
 
 #pragma mark - Initialization
-- (void)customInitMenuItem {
-    
-}
-- (instancetype)init {
-    if (self = [super init]) {
-        [self customInitMenuItem];
-        
-    }
-    return self;
-}
-
 
 
 #pragma mark - IBOutlets
 
 
-
 #pragma mark - Properties
 
 
-
-#pragma mark - Private API
-
-
-
 #pragma mark - Public API
-
-
-
-#pragma mark - Delegate Methods
-
+- (void)getMenuItems:(void (^)(MockableMenuModel *menuModel))success failure:(void (^)(NSError *error))failure;
 
 
 @end
